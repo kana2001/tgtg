@@ -1,3 +1,5 @@
+# docker-compose.yml uses variables defined in .env file
+
 ## Run the tgtg scanner
     sudo docker compose up -d
 

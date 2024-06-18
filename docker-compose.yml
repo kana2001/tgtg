@@ -12,14 +12,24 @@ services:
     # Basic example using Telegram notifications
     # For more options and details visit https://github.com/Der-Henning/tgtg/wiki/Configuration
 
-    - TGTG_USERNAME=
+    - TGTG_USERNAME=${TGTG_USERNAME}
     - SLEEP_TIME=60
-    - TZ=Europe/Berlin
-    - LOCALE=de_DE
+    - TZ=America/Toronto
+    - LOCALE=en_US
+
+    - SMTP=true
+    - SMTP_HOST=smtp.office365.com
+    - SMTP_PORT=587
+    - SMTP_TLS=true
+    - SMTP_USERNAME=${SMTP_USERNAME}
+    - SMTP_PASSWORD=${SMTP_PASSWORD}
+    - SMTP_SENDER=${SMTP_SENDER}
+    - SMTP_RECIPIENTS=${SMTP_RECIPIENTS}
+
 
     - TELEGRAM=true
-    - TELEGRAM_TOKEN=
-    - TELEGRAM_CHAT_IDS=
+    - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    - TELEGRAM_CHAT_IDS=${TELEGRAM_CHAT_IDS}
 
     volumes:
     - tokens:/tokens             ## volume to save TGTG credentials to reuse on next start up and avoid login mail
